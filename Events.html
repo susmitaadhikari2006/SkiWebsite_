@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Show Fever</title>
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="employment.html">Employment</a>
+        <a href="Events.html">Events</a>
+        <a href="lessons.html">Lessons</a>
+        <a href="snowReports.html">Snow Reports</a>
+    </div>
+    <br>
+    <p class="done"><span class="open" onclick="openNav()">&#9776; open</span>
+    
+    <div class="head-page">
+        <h1>Show Fever Ski And Board School</h1>
+        <h3>- Let it snow, let it snow, let it snow -</h3>
+    </div>
+    <h1>Events</h1>
+    <h2 class="center">Summer Hiking on the Trails and Camping</h2>
+
+
+    <div class="choosingACamp">
+        <h3 class="center">Camping!</h3>
+        <h4>Discounts & Details!</h4>
+            <p>20% discount off the total if booked prior to April 30!<br>
+            10% discount off the total if booked prior to May 31!<br>
+            Additional 10% discount if booking for a Tuesday, Wednesday, or Thursday!</p>
+        <div class="eventCardHolder">
+        <div class="eventCard">
+            <h4>Trail Getaway:</h4>
+            <img src="img/TrailsImg.jpg" alt="Picture of Trail Getaway Campsite" class="EventCardImg">
+            <p>Price: $40 Per night</p>
+            <p>Fireplace: No</p>
+        </div>
+        <div class="eventCard">
+            <h4>Mountain Retreat:</h4>
+            <img src="img/MountainRe.jpg" alt="Picture of Mountain Retreat Campsite" class="EventCardImg">
+            <p>Price: $50 Per night</p>
+            <p>Fireplace: yes</p>
+        </div>
+    </div>
+        <div class="radioButton">
+            <div class="RBItem">
+                <input type="radio" id="TrailGet" name="CampChoice" value="40" onclick="RadioClicked(40)" >
+                <label for="Trail Getaway">Trail Getaway</label><br>
+            </div>
+            <div class="RBItem">
+                <input type="radio" id="MountRe" name="CampChoice" value="50" min="2023-01-01" max="2024-12-31" onclick="RadioClicked(50)" >
+                <label for="Mountain Retreat">Mountain Retreat</label><br>
+            </div>
+        </div>
+        <br>
+        <div class="inputDates">
+            <input type="date" class="startDate" id="startDate" min="2023-01-01" max="2024-12-31" onchange="startDateEvent()">
+            <input type="date" class="endDate" id="endDate"  onchange="endDateEvent()" >
+        </div>
+
+
+
+        <p class="Price" id="Price">$$$</p>
+        <p class="Details" id="Details">qeawtdre</p>
+
+        <button class="btnSubmit" id="btnSubmit" onclick="PriceFuntion()">Check Price</button>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="app.js"></script>
+    <script src="events.js"></script>
+</body>
+</html>

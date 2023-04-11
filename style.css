@@ -1,0 +1,469 @@
+.navbar{
+    background: #00e1ff;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top:0;
+    z-index: 999;
+}
+.navbar_container{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index:1;
+    width:100%;
+    max-width: 1300px;
+    margin:0 auto;
+    padding: 0 50px;
+
+}
+
+.navbar_menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+
+
+}
+.navbar__item{
+    height: 80px;
+
+}
+.navbar_links{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    height: 100%;
+    transition: all .3s ease;
+}
+
+.navbar__btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+
+
+}
+.navbar_links:hover{
+    color: #ffffff;
+    transition: all .4s ease;
+
+}
+.highlight{
+    border-bottom: 1rem solid #00e1ff;
+    
+
+}
+@media screen and (max-width:1100px){
+    .navbar_container{
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1100px;
+        padding: 0;
+    }
+    .navbar_links{
+        justify-content: center;
+        align-items: center;
+
+    }
+    .navbar_menu{
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 1;
+        transition: all .3s ease;
+        z-index: -1;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+    .navbar_menu.active{
+        background: #0080a0;
+        top:100%;
+        opacity: 1;
+        transition: all .5s ease;
+        z-index: 99;
+        height: 60vh;
+        font: 1.6rem;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+    .navbar__item{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .navbar_links{
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+
+    /* handling classes and formatting JS inclusions */
+    #mobile-menu{
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+
+    }
+    .navbar_toggle .bar{
+        width: 25px;
+        height:3px;
+        margin: 5px auto;
+        transition: all .3s ease-in-out;
+        display: block;
+        cursor: pointer;
+        background: #fff;
+    }
+    #mobile-menu.is-active .bar:nth-child(2){
+        opacity: 0;
+
+    }
+    #mobile-menu.is-active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+
+    }
+    #mobile-menu.is-active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+        
+
+    }
+}
+
+.head-page h1, h3{
+    text-align: center;
+
+}
+h1{
+    text-align: center;
+
+}
+
+
+.card {
+justify-content: center;
+text-align: center;
+padding: 5px;
+border-radius: 1rem;
+border-color: rgb(33, 36, 35);
+width: 300px;
+height: 450px;
+background: rgb(176, 176, 224);
+transition: 1s ease-in-out;
+margin:.35rem;
+}
+
+.card p{
+    display: none;
+    color: rgb(176, 176, 224);
+}
+.card:hover p{
+    transition: 1s ;
+    color: black;
+    display:contents;
+}
+.card i{
+    font-size: 10rem;
+}
+.card:hover i{
+   font-size: xx-small;
+   display:none ;
+}
+.card:hover{
+    transition: 1s ease-in-out;
+    scale: 1.05;
+}
+
+.card_container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr  1fr 1fr;
+    transition: 1s;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+
+@media screen and (max-width:1300px){
+    .card_container{
+        grid-template-columns: 1fr 1fr;
+        margin: auto;
+        width: 50%;
+        padding: 10px;
+    }
+    .card{
+        justify-content: center;
+        align-items: center;
+        margin:1rem;
+    }
+}
+@media screen and (max-width:750px){
+    .card_container{
+        grid-template-columns:1fr;
+        margin: auto;
+        width: 50%;
+        padding: 10px;
+    }
+    .card{
+        justify-content: center;
+        align-items: center;
+        margin:1rem;
+    }
+}
+.card a {
+    text-decoration: none;
+    color: black;
+}
+.card a:hover{
+    text-decoration: none;
+    color: rgb(17, 5, 175);
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #55bdfa;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #cacaca;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-width: 750px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+    .done span{
+        font-size: 1.5rem;
+        margin: .6rem;
+        padding: .6rem;
+    }
+  }
+
+  .open{
+    font-size: 2rem;
+    margin: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+  }
+
+  .weatherToday{
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 1rem;
+  }
+
+  .weatherToday p{
+    text-align: center;
+  }
+  #weatherContainer{
+    position:fixed;
+    /* transform: translate(-50%, -50%); */
+    height: 300px;
+    width: 1300px;
+    border-radius: 10px;
+  }
+  #iconsContainer{
+    position: relative;
+    top: 50%;
+    margin-right: -50%;
+    height: 240px;
+    width: 1200px;
+    border: 5px solid #fFF;
+    border-radius: 10px;
+
+  }
+  .WOAH{
+    background: linear-gradient(to top, #c7f4ff 0%, #0080a0 100%) ;
+  }
+  .icons{
+    display: flexbox;
+    flex-direction: row;
+    float: left;
+    height: 200px;
+    width:190px;
+    margin: 20px;
+    border: 5px solid #fff;  
+    border-radius: 10px;
+}
+.image{
+    height: 140px;
+    width: 100%;
+}
+.imgClass{
+    height:140px;
+    width: 100%;
+}
+.weather{
+    border:.3rem;
+    border-style: solid;
+    width: 17rem;
+    box-shadow: 5px 10px #353434;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+.center{
+    text-align: center;
+    justify-self: center;
+    justify-content: center;
+ align-items: center;
+}
+.radioButton{
+    display: flex;
+    width: 300px;
+    border-radius: 6px;
+    border-color: black;
+    border-style: double;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.RBItem{
+    align-items: center;
+    text-align: center;
+    justify-self: center;
+    justify-content: center;
+    padding: 10px;
+}
+.choosingACamp{
+    border-radius: 6px;
+    border-color: black;
+    border-style: double;
+   width: fit-content;
+   text-align: center;
+   height: fit-content;
+   margin-left: auto;
+   margin-right: auto;
+   padding-left: 100px;
+   padding-right: 100px;
+   padding-bottom: 10px;
+   align-items: center;
+   justify-self: center;
+   justify-content: center;
+   
+}
+.Details{
+    font-size: smaller;
+    padding: 0;
+    text-align: center;
+}
+.Price{
+    text-align: center;
+}
+.inputDates{
+    text-align: center;
+}
+.eventCard{
+    width: 200px;
+    background-color: rgb(219, 228, 225);
+    margin: 10px;
+    transition: all 1s ease;
+    border-radius: 6px;
+}
+.eventCardHolder{
+    display: flex;
+    flex-wrap: wrap;
+    width: fit-content;
+    text-align: center;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.EventCardImg{
+    width: 190px;
+    height: 110px;
+    transition: .8s all ease-in-out;
+}
+.eventCard:hover{
+    width: 310px;
+}
+.EventCardImg:hover{
+    width: 300px;
+    height: 200px;
+    transition: .8s all ease-in-out;
+}
+
+
+.ListingCardsCariers{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content:   center ;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all .5s;
+}
+.cardListing{
+    padding: 10px;
+    background-color: aliceblue;
+    width: 300px;
+    height: 200px;
+    margin: 30px;
+    transition: all .5s;
+}
+.cardListing:hover{
+    transition: all .5s;
+    background-color: antiquewhite;
+    width: 350px;
+    height: 250px;
+}
+.BTN{
+    margin-top: 10px;
+    padding: 10px;
+    background-color: cadetblue;
+}
+.BTN:hover{
+    background-color: coral;
+}
